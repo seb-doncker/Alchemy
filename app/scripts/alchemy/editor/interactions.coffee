@@ -83,7 +83,7 @@ class alchemy.editor.Interactions
     deleteSelected: (d) =>
         switch d3.event.keyCode
             when 8, 46
-                if !(d3.select(d3.event.target).node().tagName is ("INPUT" or "TEXTAREA"))
+                if !(d3.select(d3.event.target).node().tagName is "INPUT") and !(d3.select(d3.event.target).node().tagName is "TEXTAREA")
                     d3.event.preventDefault()
                     alchemy.editor.remove()
 
